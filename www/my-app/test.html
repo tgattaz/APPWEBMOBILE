@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+            <style type="text/css">
+  .full,.full_2  {-webkit-transition: all 2s ease; /* Safari and Chrome */
+    transition: all 2s ease;}
+.full:hover{   -webkit-transform:scale(100); /* Safari and Chrome */
+     transform:scale(10) rotate(180deg) matrix(0.586,0.8,-0.8,0.866,0,0);
+     }
+.full2:hover{   -webkit-transform:scale(100); /* Safari and Chrome */
+    transform:scale(5);
+    }
+     
+
+.full_2:hover{  width:
+350px;  }         
+            </style>
+    <title>
+        COURS 1 et 2
+    </title>
+</head>
+
+    <body>
+
+        <img id="myImage" src="ampoule-off.jpg" style="width:100px" >
+        <button id="btSwitch">Allumer</button>
+        <script src="js/interaction.js"></script>
+
+        <center>
+            Nom : <input type="text" id="inName" /> 
+            <button id="btHello"> je vais vous dire Bonjour!</button>
+            
+        </center>
+        <script src="js/helloparam.js"></script>
+
+        <center> Bonjour !</center>
+        <center> 
+        <img src="Capture3.PNG" border="0" class='full' style="width:200px" />
+
+        </center> 
+        <center> 
+        <img src="Capture4.jpg" border="0" class='full2' style="width:300px" />
+    </center> 
+
+
+    <form id="frmInscr" onsubmit="return validateForm(event)">
+            <h1>Formulaire d'inscription</h1>
+            <p>
+                <input type="radio" name="nb" id="nb" value="nb">
+                <label for="nb">Non-binaire</label>
+                <input type="radio" name="femme" id="femme" value="femme">
+                <label for="femme">Femme</label>
+                <input type="radio" name="homme" id="homme" value="homme">
+                <label for="homme">Homme</label>
+                <span id="aideradio"></span>
+            </p>
+            <p>
+                <label for="nom">Nom</label> :
+                <input type="text" name="nom" id="nom" required>
+                <span id="aidenom"></span>
+            </p>
+            <p>
+                <label for="prenom">Prenom</label> :
+                <input type="text" name="prenom" id="prenom" required>
+                <span id="aideprenom"></span>
+            </p>
+            <p>
+                <label for="age">Age</label> :
+                <input type="text" name="age" id="age" required>
+                <span id="aideage"></span>
+            </p>
+            <p>
+                <label for="Pseudo">Pseudo</label> :
+                <input type="text" name="Pseudo" id="Pseudo" required>
+                <span id="aidepseudo"></span>
+            </p>
+            <p>
+                <label for="mdp">Mot de passe</label> :
+                <input type="password" name="mdp" id="mdp" required>
+                <span id="aidemdp"></span>
+            </p>
+            <p>
+                <label for="mdp2">Mot de passe (confirmation)</label> :
+                <input type="password" name="mdp2" id="mdp2" required>
+                <span id="aidemdp2"></span>
+            </p>
+            <p>
+                    <label for="nationalite">Pays :</label>
+                    <select name="nationalite" id="nationalite">
+                        <option value="FR" selected>France</option>
+                        <option value="BE">Togo</option>
+                        <option value="SUI">Coree du Nord</option>
+                        <option value="XX">Autre</option>
+                    </select>
+            </p>  
+            <p>
+                <input type="checkbox" name="confirmation" id="confirmation">
+                <label for="confirmation">Je desire recevoir la newsletter chaque mois.</label>
+            </p>
+
+           
+            <input type="submit" id="submit" value="Envoyer">
+            <input type="reset" value="Annuler">
+        </form>
+        <script src="js/veriform.js"></script>
+    </body>
+
+
+
+</html>
