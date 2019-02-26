@@ -24,6 +24,12 @@
             <h2>Controller 2</h2>
             Hello {{firstName}} !
         </div>
+        <br/>
+        <br/>
+        <div ng-controller="exempleCtrl">
+            <input ng-model="age"/>
+            <span>Vous êtes <b ng-bind="majeurOumineurText()"></b></span>
+        </div>
     </body>
 
 
@@ -41,6 +47,19 @@
         todoApp.controller('TestCtrl2', ['$scope', function($scope){
             $scope.firstName = "Polytech <3 ";
         }]);
+   
+        var ageApp = angular.module('ageApp', []);
+
+        todoApp.controller("exempleCtrl", ['$scope', function($scope){
+            console.log("Bonjour je suis passé ici");
+            $scope.age=0;
+            $scope.majeurOumineurText = function()
+            {
+                return ($scope.age >= 18) ? 
+            "majeur" : "mineur";
+            };
+        }]);
+</script>
         
-    </script>
+
 </html>
